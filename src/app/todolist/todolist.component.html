@@ -1,0 +1,17 @@
+<div class="todolist">
+    <ng-container *ngFor="let list of todolist">
+        <div class="listContainer"
+            (dragenter)="preventEvent($event)"
+            (dragover)="preventEvent($event)"
+            (drop)="drop(list)">
+            <span>{{ list.title }}</span>
+            <ng-container *ngFor="let item of list.item; let itemIndex = index">
+                <div class="listItem" draggable="true"
+                    (dragstart)="dragstart(list, item, itemIndex)"
+                    (dragleave)="dragleave(item, itemIndex)">
+                    {{ item.text }}
+                </div>
+            </ng-container>
+        </div>
+    </ng-container>
+</div>

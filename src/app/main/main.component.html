@@ -1,0 +1,17 @@
+<div class="main">
+    <ng-container *ngFor="let list of listSet">
+        <div #container class="container"
+            (dragenter)="preventEvent($event)"
+            (dragover)="preventEvent($event)"
+            (dragleave)="dragleaveContainer($event, container)"
+            (drop)="drop($event, container)">
+            <span>{{ list.title }}</span>
+            <ng-container *ngFor="let item of list.item">
+                <div #listItem class="listItem" draggable="true"
+                    [class.show]="list.id == item.container"
+                    (dragstart)="dragstart($event, container, listItem)"
+                    (dragleave)="dragleave($event, listItem)">{{ item.text }}</div>
+            </ng-container>
+        </div>
+    </ng-container>
+</div>

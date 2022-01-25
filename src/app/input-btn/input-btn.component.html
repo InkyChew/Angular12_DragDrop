@@ -1,0 +1,9 @@
+<div class="btnInput">
+    <!-- <div class="inputBox"> -->
+        <input type="text" [(ngModel)]="inputText" #inputTxt="ngModel" required>
+    <!-- </div> -->
+    <button>send123456</button>
+    <ng-container *ngIf="inputTxt.touched && inputTxt.invalid">
+        <div class="errorMsg">Input is invalid</div>
+    </ng-container>
+</div>

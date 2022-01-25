@@ -1,0 +1,20 @@
+.btnInput {
+    min-width: 100%;
+    min-height: 100%;
+    // .inputBox {
+        // position: relative;
+        // background-color: yellow;
+        // width: 10em;
+        // height: 1em;
+        input {
+            // position:absolute;
+            // top:0px;
+            min-height: 100%;
+            max-width: calc(100% - 50px);
+        }
+    // }
+    button {
+        width: 50px;
+        word-wrap: break-word;
+    }
+}

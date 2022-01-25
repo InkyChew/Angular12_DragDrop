@@ -1,0 +1,37 @@
+.container {
+    display: inline-block;
+    width: 300px;
+    min-height: 100%;
+    border: 1px solid;
+    padding: 10px;
+}
+.dropTarget {
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    border: 1px solid;
+}
+
+.listItem {
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    border: 1px solid steelblue;
+    margin: 10px 0px;
+    display: none;
+    text-align: center;
+    line-height: 50px;
+}
+
+.show {
+    display: block;
+}
+
+.box {
+    width: 200px;
+    border: 1px solid;
+}
+
+// .moveUp {
+    // transform: translateY(-30px);
+// }
